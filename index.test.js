@@ -1,7 +1,8 @@
 const assert = require("assert");
 const { forEach, map } = require("./index");
 
-const test = (desc, fn) => {
+// MANUAL TEST
+/* const test = (desc, fn) => {
   console.log("----", desc);
 
   try {
@@ -9,9 +10,12 @@ const test = (desc, fn) => {
   } catch (err) {
     console.log(err.message);
   }
-};
+ };
+*/
 
-test("The forEach function", () => {
+// MOCHA
+
+it("The forEach function", () => {
   let sum = 0;
   forEach([1, 2, 3], (value) => {
     sum += value;
@@ -24,7 +28,7 @@ test("The forEach function", () => {
   );
 });
 
-test("The map function", () => {
+it("The map function", () => {
   const result = map([1, 2, 3], (value) => {
     return value * 2;
   });
